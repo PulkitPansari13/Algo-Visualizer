@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="icon" href="/favicon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      //   const barpurple = "#7952b3";
+      const barpurple = "#D62AD0"; // original color
+      const merge_left_color = "#FF6701"; // left half of merging array.
+      const merge_right_color = "#FFC107";
+      //   const intermediate_sorted_color = "lightgreen";
+      const intermediate_sorted_color = "#66DE93";
+      // when one ele is compared against other eles
+      // used in selection and insetion sort.
+      const comparing_ele_color = "#00EAD3";
+      const traverse_color = "lightblue";
+      const sorted_color = "green";
+    </script>
+    <script src="js/utility.js" async></script>
+    <script src="js/bubble.js" async></script>
+    <script src="js/insert.js" async></script>
+    <script src="js/selection.js" async></script>
+    <script src="js/merge.js" async></script>
+    <script src="js/quick.js" async></script>
+    <script src="js/main.js" defer></script>
+    <title>Algo Visualizer</title>
+  </head>
+  <body>
+    <div class="p-3">
+      <nav>
+        <h3 class="text-white text-center">Algo Visualizer 🔮</h3>
+        <div class="ip-container">
+          <div class="me-3">
+            <label for="size_input" class="ip_label">Array Size ↔️</label>
+            <br />
+            <input
+              type="range"
+              name="array_size"
+              id="size_input"
+              min="10"
+              max="150"
+              value="60"
+            />
+          </div>
+          <div class="me-3">
+            <label for="speed_input" class="ip_label">Speed ⚡</label>
+            <br />
+            <input
+              type="range"
+              name="delay"
+              id="speed_input"
+              min="0"
+              max="150"
+              value="50"
+            />
+          </div>
+          <button
+            type="button"
+            id="new-arraybtn"
+            class="btn btn-dark btn-outline-success border border-info me-3"
+          >
+            New Array
+          </button>
+          <button
+            type="button"
+            id="resetbtn"
+            class="btn btn-dark btn-outline-info me-3"
+          >
+            Reset Array
+          </button>
+        </div>
+        <div class="srtbtn-container">
+          <button
+            type="button"
+            class="btn btn-dark srtbtn"
+            id="bubbleSort"
+            data-sort-name="bubble"
+          >
+            Bubble Sort
+          </button>
+          <button
+            type="button"
+            class="btn btn-dark srtbtn"
+            id="insertSort"
+            data-sort-name="insert"
+          >
+            Insertion Sort
+          </button>
+          <button
+            type="button"
+            class="btn btn-dark srtbtn"
+            id="selectionSort"
+            data-sort-name="select"
+          >
+            Selection Sort
+          </button>
+          <button
+            type="button"
+            class="btn btn-dark srtbtn"
+            id="mergeSort"
+            data-sort-name="merge"
+          >
+            Merge Sort
+          </button>
+          <button
+            type="button"
+            class="btn btn-dark srtbtn"
+            id="quickSort"
+            data-sort-name="quick"
+          >
+            Quick Sort
+          </button>
+          <button
+            type="button"
+            class="btn btn-dark srtbtn"
+            id="randomQuickSort"
+            data-sort-name="randquick"
+          >
+            Random Quick Sort
+          </button>
+        </div>
+      </nav>
+      <div id="viz-board">
+        <div id="srt-status" class="invisible">
+          <div>
+            <div>
+              No. of Comparison:
+              <span id="ncomp" class="badge bg-light text-dark">0</span>
+            </div>
+            <div>
+              No. of Swap:
+              <span id="nswap" class="badge bg-light text-dark">0</span>
+            </div>
+            <small id="mgsrt-info" class="d-none"
+              >(not-in-place, no swapping!)</small
+            >
+          </div>
+        </div>
+        <div id="array-container"></div>
+        <!-- <div id="srt-info">Time Complexity</div> -->
+        <div id="srt-info"></div>
+      </div>
+    </div>
+  </body>
+</html>

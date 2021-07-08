@@ -1,0 +1,77 @@
+body {
+  background-color: #0a1d37;
+  /* background-color: #f5f5f5; */
+}
+.ip-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.ip_label {
+  color: white;
+}
+.srtbtn-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.srtbtn {
+  margin: 0px 5px;
+  font-size: smaller;
+  /* letter-spacing: 1px; */
+  border-color: white;
+}
+#viz-board {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#srt-status {
+  width: 20%;
+  color: white;
+  font-size: larger;
+  align-self: flex-start;
+  padding-top: 15px;
+  /* padding-right: 5px; */
+  text-align: right;
+  letter-spacing: 0.5px;
+}
+#srt-info {
+  width: 20%;
+  color: white;
+  font-size: larger;
+  align-self: flex-start;
+  padding-top: 15px;
+  text-align: center;
+}
+#mgsrt-info {
+  font-size: 0.6em;
+}
+#array-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 5px;
+  width: 54%;
+  height: 525px;
+}
+.bar {
+  height: 1px;
+  width: 7px;
+  max-width: 30px;
+  margin-left: 0.1%;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+  padding: 1px;
+  font-size: x-small;
+  /* line-height: 10px;  */
+  /* background-color: #7952b3; */
+  background-color: #d62ad0;
+  transition: 0.1s all ease-in;
+  /* box-shadow: 2px -1px 5px 1px rgb(0 0 0 / 35%); */
+  /* transition: 0.1s background-color ease-in; */
+}
